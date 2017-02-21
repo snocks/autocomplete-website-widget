@@ -11,7 +11,7 @@
         text-align: center;
     }
     
-    .form-wrapper {
+    .div-wrapper {
         width: 450px;
         height: 60px;
         padding: 15px;
@@ -21,9 +21,9 @@
         box-shadow: 0 1px 1px rgba(0, 0, 0, .4) inset, 0 1px 0 rgba(255, 255, 255, .2);
     }
     
-    .form-wrapper input {
-        width: 450px;
-        height: 60px;
+    .div-wrapper input {
+        width: 430px;
+        height: 40px;
         font-size: 20px;
         font-weight: normal;
         font-style: italic;
@@ -33,12 +33,12 @@
         border-radius: 3px 0 0 3px;
     }
     
-    .form-wrapper input:focus {
+    .div-wrapper input:focus {
         outline: 0;
         background: #fff;
     }
     
-    .form-wrapper input::-webkit-input-placeholder {
+    .div-wrapper input::-webkit-input-placeholder {
         color: #999;
         font-size: 20px;
         font-weight: normal;
@@ -48,9 +48,23 @@
 </head>
 
 <body>
-    <form class="form-wrapper cf">
-        <input id="mysearch" type="search" placeholder="Search here..." required/>
-    </form>
+    <div class="div-wrapper cf">
+    <datalist id="languages">
+	  <option value="HTML">
+	  <option value="CSS">
+	  <option value="JavaScript">
+	  <option value="Java">
+	  <option value="Ruby">
+	  <option value="PHP">
+	  <option value="Go">
+	  <option value="Erlang">
+	  <option value="Python">
+	  <option value="C">
+	  <option value="C#">
+	  <option value="C++">
+	</datalist>
+        <input list="languages" type="text" placeholder="Search here..." required/>
+    </div>
 </body>
 
 </html>
