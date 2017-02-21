@@ -3,68 +3,15 @@
 
 <head>
     <title>Autocomplete-website-widget </title>
-    <style>
-    body {
-        background: #555 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB9JREFUeNpi/P//PwM6YGLAAuCCmpqacC2MRGsHCDAA+fIHfeQbO8kAAAAASUVORK5CYII=);
-        font: 13px 'Lucida sans', Arial, Helvetica;
-        color: #eee;
-        text-align: center;
-    }
-    
-    .div-wrapper {
-        width: 450px;
-        height: 60px;
-        padding: 15px;
-        margin: 150px auto 50px auto;
-        background: rgba(0, 0, 0, .2);
-        border-radius: 10px;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, .4) inset, 0 1px 0 rgba(255, 255, 255, .2);
-    }
-    
-    .div-wrapper input {
-        width: 430px;
-        height: 40px;
-        font-size: 20px;
-        font-weight: normal;
-        font-style: italic;
-        padding: 10px 5px;
-        float: left;
-        background: #eee;
-        border-radius: 3px 0 0 3px;
-    }
-    
-    .div-wrapper input:focus {
-        outline: 0;
-        background: #fff;
-    }
-    
-    .div-wrapper input::-webkit-input-placeholder {
-        color: #999;
-        font-size: 20px;
-        font-weight: normal;
-        font-style: italic;
-    }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
     <div class="div-wrapper cf">
-    <datalist id="languages">
-	  <option value="HTML">
-	  <option value="CSS">
-	  <option value="JavaScript">
-	  <option value="Java">
-	  <option value="Ruby">
-	  <option value="PHP">
-	  <option value="Go">
-	  <option value="Erlang">
-	  <option value="Python">
-	  <option value="C">
-	  <option value="C#">
-	  <option value="C++">
-	</datalist>
-        <input list="languages" type="text" placeholder="Search here..." required/>
+        <datalist id="json-datalist"></datalist>
+        <input id="ajax" list="json-datalist" type="text" placeholder="Search here..." required/>
     </div>
+    <script type="text/javascript" src="./utils.js"></script>
 </body>
 
 </html>
