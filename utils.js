@@ -1,5 +1,8 @@
-var form = require('./app/form.js')
+// var fs =  require('fs');
 
+// var form = fs.readFileSync(__dirname + '/./view/form.html','utf8');
+// var indexOf = form.indexOf('datalist');
+// console.log('fooorm', indexOf);
 // Get the <datalist> and <input> elements.
 var dataList = document.getElementById('json-datalist');
 var input = document.getElementById('ajax');
@@ -37,5 +40,5 @@ request.onreadystatechange = function(response) {
 input.placeholder = "Loading options...";
 
 // Set up and make the request.
-request.open('GET', 'https://github.com/gazaskygeeks/bootcamp/blob/master/words.txt', true);
+request.open('GET', '../words.txt', true);
 request.send();
