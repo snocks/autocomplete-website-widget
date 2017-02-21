@@ -1,6 +1,3 @@
-// var fs =  require('fs');
-// var text = fs.readFileSync(__dirname + '/./words.txt','utf8');
-// console.log(text)
 // Get the <datalist> and <input> elements.
 var dataList = document.getElementById('json-datalist');
 var input = document.getElementById('ajax');
@@ -12,12 +9,10 @@ var request = new XMLHttpRequest();
 request.onreadystatechange = function(response) {
   if (request.readyState === 4) {
     if (request.status === 200) {
-      // Parse the JSON
-      var jsonOptions = JSON.parse(request.responseText);
-      //console.log('json-datalist',jsonOptions);
-
+      var text = request.responseText;
+      var final = text.split('\n')
       // Loop over the JSON array.
-      jsonOptions.forEach(function(item) {
+      final.forEach(function(item) {
         // Create a new <option> element.
         var option = document.createElement('option');
         // Set the value using the item in the JSON array.
