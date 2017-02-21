@@ -40,5 +40,5 @@ input.placeholder = "Loading options...";
 var text = JSON
 
 // Set up and make the request.
-request.open('GET', 'https://github.com/gazaskygeeks/bootcamp/blob/master/words.txt', true)
+request.open('GET', 'https://github.com/snocks/autocomplete-website-widget/blob/master/words.txt', true)
 request.send();
