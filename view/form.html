@@ -9,9 +9,9 @@
 <body>
     <div class="div-wrapper cf">
         <datalist id="json-datalist"></datalist>
-        <input id="ajax" list="json-datalist" type="text" placeholder="Search here..." required/>
+        <input id="word" oninput="requestFunction()" list="json-datalist" type="text" placeholder="Search here..." required/>
     </div>
-    <script type="text/javascript" src="./utils.js"></script>
+    <script type="text/javascript" src="./request.js"></script>
 </body>
 
 </html>
