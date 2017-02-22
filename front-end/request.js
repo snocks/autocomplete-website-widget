@@ -1,5 +1,5 @@
 
-function requestFunction(){
+module.exports = function requestFunction(){
 	var input = document.getElementById("word").value;
 	var http = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -9,6 +9,6 @@ function requestFunction(){
     	console.log("error");
     }
   };
-  http.open("GET", "./app/code.js", true);
+  http.open("POST", "/findword", true);
   http.send(input);
 }
